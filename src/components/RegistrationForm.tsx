@@ -54,11 +54,11 @@ const descriptionOptions = [
     'HARDWARE SHOP',
     'HOUSE WIFE',
     'LABOURER',
-    'OTHER',
     'SERVICE',
     'STUDENT',
     'TEACHER',
     'TRANSPORTATION',
+    'OTHER',
 ].sort();
 
 
@@ -175,6 +175,8 @@ export default function RegistrationForm() {
     const [hasAgreed, setHasAgreed] = useState(false);
 
     const maidenSurnameSelection = watch('maidenSurname');
+    const [imageFile, setImageFile] = useState<File | null>(null);
+
 
     useEffect(() => {
         const fetchAndSetData = async () => {
